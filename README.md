@@ -3,7 +3,7 @@ Some Script
 
 curl -sL https://github.com/tnnd/sh/raw/master/transmission/transmission-deb.sh | bash
 
-# qBittorrent Stable
+#qBittorrent Stable
 sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable
 apt-get update && apt-get install qbittorrent-nox
 
