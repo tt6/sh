@@ -1,7 +1,7 @@
 # Some Script
 
 #transmission  
-curl -sL https://git.io/fhjPW | bash | bash
+curl -sL https://git.io/fhjPW | bash
 
 #qBittorrent Stable  
 sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable  
