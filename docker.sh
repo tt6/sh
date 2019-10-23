@@ -6,3 +6,4 @@ chmod +x /usr/bin/docker*
 
 #run docker
 nohup dockerd 2>&1 &
+docker -v
