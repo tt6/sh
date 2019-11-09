@@ -8,11 +8,10 @@ sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable
 apt-get update && apt-get -y install qbittorrent-nox  
 qbittorrent-nox
 
-#xrdp_0.9.6-1_amd64.deb  
-echo "deb http://cz.archive.ubuntu.com/ubuntu cosmic main universe" >> /etc/apt/sources.list  
 #xrdp_0.9.4-1 for xenial  
 add-apt-repository ppa:hermlnx/xrdp  
-apt-get update && apt-get install xrdp
+#xrdp_0.9.6-1_amd64.deb  
+echo "deb http://cz.archive.ubuntu.com/ubuntu cosmic main universe" >> /etc/apt/sources.list
 
 #firefox-esr for ubuntu  
 sudo add-apt-repository ppa:mozillateam/ppa  
