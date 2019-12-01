@@ -20,3 +20,6 @@ sudo apt-get update && apt-get install firefox-esr
 #ssh保持长连接的方式 。client端的etc/ssh/ssh_config：  
 ServerAliveInterval 60  
 ServerAliveCountMax 3  
+
+#一键安装开启原版BBR  
+https://github.com/teddysun/across/raw/master/bbr.sh
