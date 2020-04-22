@@ -21,6 +21,7 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
     steps:
     - name: Set SSH Environment
       env:
@@ -36,17 +37,10 @@ jobs:
     - name: Sync Docs of Gerapy
       run: |
         cd /tmp
-        git clone git@github.com:Gerapy/Docs.git docs
+        git clone git@github.com:tnnd/php-proxy.git docs
         cd docs
-        git branch -D docs || true
-        git push origin --delete docs || true
-        git clone https://github.com/Gerapy/Gerapy.git gerapy
-        cd gerapy
-        git subtree split --prefix=docs --squash -b docs
-        git checkout docs
-        git push /tmp/docs docs:docs
-        cd /tmp/docs
-        git checkout docs
-        git checkout -b master || git checkout master || true
-        git reset --hard docs
+        cd php-proxy/plugins
+        date > git-auto.txt
+        git add .
+        git commit -a -m "git auto commit"
         git push origin master --force
