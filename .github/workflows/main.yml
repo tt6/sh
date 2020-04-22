@@ -35,8 +35,8 @@ jobs:
       run: |
         cd /tmp
         git clone git@us-south.git.cloud.ibm.com:cuiyy/php-proxy.git
+        ls -l
         cd ./php-proxy/plugins
-        ls-l
         date > git-auto.txt
         git add .
         git commit -a -m "git auto commit"
