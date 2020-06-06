@@ -2,9 +2,10 @@
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 
-apt-get update && apt-get install -y transmission-daemon \
+apt-get update
+apt-get install -y transmission-daemon ca-certificates \
         && cd /var/lib/transmission-daemon/info/ \
-        && wget -N https://raw.githubusercontent.com/tnnd/sh/master/transmission/settings.json \
+        && curl -Ok https://raw.githubusercontent.com/tnnd/sh/master/transmission/settings.json \
         && service transmission-daemon reload
 
 # SETTINGS.JSON
