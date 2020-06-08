@@ -24,4 +24,4 @@ gcloud compute instances create ttg --machine-type n1-standard-1 --zone asia-eas
 gcloud compute firewall-rules create http --allow tcp:9091  
 
 #一键安装开启原版BBR  
-https://github.com/teddysun/across/raw/master/bbr.sh
+curl -sL https://github.com/teddysun/across/raw/master/bbr.sh |bash  
