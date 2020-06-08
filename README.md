@@ -21,5 +21,9 @@ sudo apt-get update && apt-get install firefox-esr
 ServerAliveInterval 60  
 ServerAliveCountMax 3  
 
+#GCP  
+gcloud compute instances create ttg --machine-type n1-standard-1 --zone asia-east2-a --boot-disk-size 50 --boot-disk-type pd-ssd  
+gcloud compute firewall-rules create http --allow tcp:9091  
+
 #一键安装开启原版BBR  
 https://github.com/teddysun/across/raw/master/bbr.sh
