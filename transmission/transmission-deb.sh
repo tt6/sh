@@ -5,7 +5,7 @@ export PATH
 apt-get update
 apt-get install -y transmission-daemon \
         && cd /var/lib/transmission-daemon/info/ \
-        && curl -LJOk https://raw.githubusercontent.com/tnnd/sh/master/transmission/settings.json \
+        && curl -OL https://raw.githubusercontent.com/tnnd/sh/master/transmission/settings.json \
         && service transmission-daemon reload
 
 # SETTINGS.JSON
@@ -14,6 +14,5 @@ apt-get install -y transmission-daemon \
 
 # END
 clear
-echo "Done."
-echo " "
+echo "Done............................."
 echo "Web GUI: http://your ip:9091/"
