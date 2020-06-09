@@ -12,8 +12,7 @@ qbittorrent-nox
 add-apt-repository ppa:hermlnx/xrdp  
 
 #firefox-esr for ubuntu  
-sudo add-apt-repository ppa:mozillateam/ppa  
-sudo apt-get update && apt-get install firefox-esr
+sudo add-apt-repository ppa:mozillateam/ppa && sudo apt update && apt install firefox-esr
 
 #ssh保持长连接的方式 。client端的etc/ssh/ssh_config：  
 ServerAliveInterval 60  
