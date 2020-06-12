@@ -19,8 +19,8 @@ ServerAliveInterval 60
 ServerAliveCountMax 3  
 
 #GCP  
-gcloud compute instances create ttg --machine-type n1-standard-1 --zone asia-east2-a --boot-disk-size 50  
-gcloud compute firewall-rules create http --allow tcp:9091  
+gcloud compute instances create ttg --machine-type n1-standard-1 --zone asia-east2-a --boot-disk-size 200  
+gcloud compute firewall-rules create http --allow tcp:9091-11413  
 
 #一键安装开启原版BBR  
 curl -sL https://github.com/teddysun/across/raw/master/bbr.sh |bash  
