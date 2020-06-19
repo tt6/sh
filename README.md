@@ -1,7 +1,7 @@
 # Some Script
 
 #transmission  
-curl -sL https://git.io/fhjPW | bash
+curl -sL https://git.io/fhjPW | sudo bash
 
 #qBittorrent Stable  
 sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable  
@@ -19,8 +19,9 @@ ServerAliveInterval 60
 ServerAliveCountMax 3  
 
 #GCP  
-gcloud compute instances create ttg --machine-type n1-standard-1 --zone asia-east2-a --boot-disk-size 200  
 gcloud compute firewall-rules create http --allow tcp:9091-11413  
+gcloud compute instances create ttg --machine-type n1-standard-1 --zone asia-east2-a --boot-disk-size 200  
+gcloud compute ssh ttg --zone asia-east2-a --command 'curl -sL https://git.io/fhjPW | sudo bash'  
 
 #一键安装开启原版BBR  
 curl -sL https://github.com/teddysun/across/raw/master/bbr.sh |bash  
