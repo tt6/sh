@@ -8,6 +8,11 @@ sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable
 apt-get update && apt-get -y install qbittorrent-nox  
 qbittorrent-nox
 
+#GCP  
+gcloud compute firewall-rules create http --allow tcp:9091-11413  
+gcloud compute instances create ttg --machine-type n1-standard-1 --zone asia-east2-a --boot-disk-size 200  
+gcloud compute ssh ttg --zone asia-east2-a --command 'curl -L https://git.io/fhjPW |sudo bash &'  
+
 #xrdp_0.9.4-1 for xenial  
 add-apt-repository ppa:hermlnx/xrdp  
 
@@ -17,11 +22,6 @@ sudo add-apt-repository ppa:mozillateam/ppa && sudo apt update && apt install fi
 #ssh保持长连接的方式 。client端的etc/ssh/ssh_config：  
 ServerAliveInterval 60  
 ServerAliveCountMax 3  
-
-#GCP  
-gcloud compute firewall-rules create http --allow tcp:9091-11413  
-gcloud compute instances create ttg --machine-type n1-standard-1 --zone asia-east2-a --boot-disk-size 200  
-gcloud compute ssh ttg --zone asia-east2-a --command 'curl -L https://git.io/fhjPW |sudo bash &'  
 
 #一键安装开启原版BBR  
 curl -sL https://github.com/teddysun/across/raw/master/bbr.sh |bash  
