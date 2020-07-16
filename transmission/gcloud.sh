@@ -3,4 +3,4 @@ gcloud compute instances create ttg --machine-type n1-standard-2 --zone asia-eas
 gcloud compute ssh ttg --zone asia-east2-a --command 'curl -L https://git.io/fhjPW |sudo bash &'
 gcloud compute ssh ttg --zone asia-east2-a
 #Debian xfce4
-echo "sudo apt install xfce4 xrdp qbittorrent && sudo apt purge xserver-xorg-legacy xscreensaver"
+echo "sudo -i && apt install xfce4 xrdp qbittorrent && apt purge xserver-xorg-legacy xscreensaver && useradd -m -p "33rvTQ31Fvuj6" cyy"
