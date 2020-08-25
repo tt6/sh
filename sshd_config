@@ -1,6 +1,0 @@
-
-# Change to no to disable tunnelled clear text passwords
-#PasswordAuthentication no
-
-ClientAliveInterval 60
-ClientAliveCountMax 3
