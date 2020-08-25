@@ -20,9 +20,6 @@ add-apt-repository ppa:hermlnx/xrdp
 #firefox-esr for ubuntu  
 sudo add-apt-repository ppa:mozillateam/ppa && sudo apt update && apt install firefox-esr
 
-#ssh保持长连接的方式 。client端的etc/ssh/ssh_config：  
-ServerAliveInterval 60  
-ServerAliveCountMax 3  
 
 #一键安装开启原版BBR  
 curl -sL https://github.com/teddysun/across/raw/master/bbr.sh |bash  
