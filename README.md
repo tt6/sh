@@ -1,10 +1,7 @@
 # Some Script
 
-#GCP  
-gcloud compute firewall-rules create http --allow tcp:9091-11413  
-gcloud compute instances create ttg --machine-type n1-standard-2 --zone asia-east2-a --boot-disk-size 200 --boot-disk-type pd-ssd  
-gcloud compute ssh ttg --zone asia-east2-a --command 'curl -L https://git.io/fhjPW |sudo bash &'  
-sudo apt install -y xfce4 xrdp qbittorrent && sudo apt purge -y xserver-xorg-legacy
+#GCP in qwiklabs.com  
+https://gist.github.com/tnnd/4e14e4e1a207b901d4b9ebd478ef37c4
 
 #transmission  
 curl -sL https://git.io/fhjPW | sudo bash
