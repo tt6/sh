@@ -1,7 +1,7 @@
 # Some Script
 
 #GCP in qwiklabs.com  
-https://gist.github.com/tnnd/4e14e4e1a207b901d4b9ebd478ef37c4
+https://git.io/JUJgX
 
 #transmission  
 curl -sL https://git.io/fhjPW | sudo bash
