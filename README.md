@@ -13,10 +13,11 @@ qbittorrent-nox
 
 #xrdp_0.9.4-1 for xenial  
 add-apt-repository ppa:hermlnx/xrdp  
-
 #firefox-esr for ubuntu  
 sudo add-apt-repository ppa:mozillateam/ppa && sudo apt update && apt install firefox-esr
 
+#chromium in Docker
+chromium-browser --disable-dev-shm-usage --disable-gpu --no-sandbox
 
 #一键安装开启原版BBR  
 curl -sL https://github.com/teddysun/across/raw/master/bbr.sh |bash  
