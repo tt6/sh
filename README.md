@@ -6,8 +6,8 @@ https://git.io/JUJgX
 #transmission  
 curl -sL https://git.io/fhjPW | sudo bash
 
-__#nginx for ubuntu__
-add-apt-repository ppa:nginx/stable
+__#nginx for ubuntu__  
+add-apt-repository ppa:nginx/stable  
 __#xrdp_0.9.4-1 for xenial__  
 add-apt-repository ppa:hermlnx/xrdp  
 __#firefox-esr for ubuntu__  
