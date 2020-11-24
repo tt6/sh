@@ -1,7 +1,8 @@
 ## Some Script
 
 #GCP in qwiklabs.com  
-https://git.io/JUJgX
+https://git.io/JUJgX  
+gcloud compute instances create hdh --machine-type e2-small --zone us-east1-b --boot-disk-size 200  
 
 #transmission  
 curl -sL https://git.io/fhjPW | sudo bash
