@@ -23,3 +23,6 @@ qbittorrent-nox
 
 #一键安装开启原版BBR  
 curl -sL https://github.com/teddysun/across/raw/master/bbr.sh |bash  
+
+__#A1P-5T__
+https://victoriaca-my.sharepoint.com/:f:/g/personal/founder_ncov_office_gy/EkKmTZPQrrRGunm7upjSOxEBMhoUhUqsjX1hsfh1bpIA7A?e=X6epHC
