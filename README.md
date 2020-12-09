@@ -12,7 +12,7 @@ add-apt-repository ppa:nginx/stable
 __#xrdp_0.9.4-1 for xenial__  
 add-apt-repository ppa:hermlnx/xrdp  
 __#firefox-esr for ubuntu__  
-sudo add-apt-repository ppa:mozillateam/ppa && sudo apt update && apt install firefox-esr  
+add-apt-repository ppa:mozillateam/ppa -y && apt update && apt install firefox-esr  
 __#chromium in Docker__  
 chromium-browser --disable-dev-shm-usage --disable-gpu --no-sandbox
 
