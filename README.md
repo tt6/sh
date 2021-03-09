@@ -12,7 +12,7 @@ add-apt-repository ppa:nginx/stable
 __#nginx for debian STRETCH__  
 echo "deb http://nginx.org/packages/debian/ stretch nginx" >> /etc/apt/sources.list  
 curl -sL http://nginx.org/keys/nginx_signing.key | apt-key add  
-apt update && apt install nginx
+apt update && apt install nginx && systemctl enable nginx
 
 __#xrdp_0.9.4-1 for xenial__  
 add-apt-repository ppa:hermlnx/xrdp  
