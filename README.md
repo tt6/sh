@@ -27,7 +27,7 @@ apt-get update && apt-get -y install qbittorrent-nox
 qbittorrent-nox
 
 #一键安装开启原版BBR  
-curl -sL https://github.com/teddysun/across/raw/master/bbr.sh |bash  
+wget https://github.com/teddysun/across/raw/master/bbr.sh |bash bbr.sh
 
 https://github.com/Hibbiki/chromium-win32/releases
 
