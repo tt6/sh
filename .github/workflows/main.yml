@@ -26,18 +26,19 @@ jobs:
     - name: Set SSH Environment
       env:
         IBM_DEPLOY_KEY: ${{ secrets.IBM_DEPLOY_KEY }}
+        IBM_GIT_RES: ${{ secrets.IBM_GIT_RES }}
       run: |
-        mkdir -p ~/.ssh/
-        echo "$IBM_DEPLOY_KEY" > ~/.ssh/id_rsa
-        chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan us-south.git.cloud.ibm.com > ~/.ssh/known_hosts
-        chmod 700 ~/.ssh && chmod 600 ~/.ssh/*
         git config --global user.email "cqc@cuiqingcai.com"
         git config --global user.name "Germey"
+#        mkdir -p ~/.ssh/
+#        echo "$IBM_DEPLOY_KEY" > ~/.ssh/id_rsa
+#        chmod 600 ~/.ssh/id_rsa
+#        ssh-keyscan us-south.git.cloud.ibm.com > ~/.ssh/known_hosts
+#        chmod 700 ~/.ssh && chmod 600 ~/.ssh/*        
     - name: Sync Docs of Gerapy
       run: |
         cd /tmp
-        git clone git@us-south.git.cloud.ibm.com:cuiyy/tz.git
+        git clone "$IBM_GIT_RES"
         ls -l
         cd ./tz/test
         date > git-auto.txt
