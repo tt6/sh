@@ -29,18 +29,11 @@ jobs:
         git config --global user.name "Germey"
     - name: Sync Docs of Gerapy
       env:
-        IBM_DEPLOY_KEY: ${{ secrets.IBM_DEPLOY_KEY }}
         IBM_GIT_RES: ${{ secrets.IBM_GIT_RES }}
       run: |
         cd /tmp
-        ls -l
-        echo hello,
-        echo "$IBM_GIT_RES"
-        echo world!
         git clone $IBM_GIT_RES
         cd ./tz/test
         date > git-auto.txt
-        git add .
         git commit -a -m "git auto commit"
         git push origin --force
-        echo "git ok!"
