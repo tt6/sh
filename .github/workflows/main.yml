@@ -39,9 +39,8 @@ jobs:
       run: |
         cd /tmp
         git clone "$IBM_GIT_RES"
-        ls -l
         cd ./tz/test
         date > git-auto.txt
         git add .
         git commit -a -m "git auto commit"
-        git push origin master --force
+        git push origin
