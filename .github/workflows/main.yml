@@ -30,11 +30,6 @@ jobs:
       run: |
         git config --global user.email "cqc@cuiqingcai.com"
         git config --global user.name "Germey"
-#        mkdir -p ~/.ssh/
-#        echo "$IBM_DEPLOY_KEY" > ~/.ssh/id_rsa
-#        chmod 600 ~/.ssh/id_rsa
-#        ssh-keyscan us-south.git.cloud.ibm.com > ~/.ssh/known_hosts
-#        chmod 700 ~/.ssh && chmod 600 ~/.ssh/*        
     - name: Sync Docs of Gerapy
       run: |
         cd /tmp
@@ -43,4 +38,4 @@ jobs:
         date > git-auto.txt
         git add .
         git commit -a -m "git auto commit"
-        git push origin
+        git push origin --force
