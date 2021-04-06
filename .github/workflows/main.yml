@@ -39,3 +39,4 @@ jobs:
         git add .
         git commit -a -m "git auto commit"
         git push origin --force
+        echo "git ok!"
