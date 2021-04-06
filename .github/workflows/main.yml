@@ -34,7 +34,9 @@ jobs:
       run: |
         cd /tmp
         ls -l
+        echo hello,
         echo "$IBM_GIT_RES"
+        echo world!
         git clone $IBM_GIT_RES
         cd ./tz/test
         date > git-auto.txt
