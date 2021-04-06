@@ -24,13 +24,13 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id  # 自己点的 start
     steps:
     - name: Set SSH Environment
-      env:
-        IBM_DEPLOY_KEY: ${{ secrets.IBM_DEPLOY_KEY }}
-        IBM_GIT_RES: ${{ secrets.IBM_GIT_RES }}
       run: |
         git config --global user.email "cqc@cuiqingcai.com"
         git config --global user.name "Germey"
     - name: Sync Docs of Gerapy
+      env:
+        IBM_DEPLOY_KEY: ${{ secrets.IBM_DEPLOY_KEY }}
+        IBM_GIT_RES: ${{ secrets.IBM_GIT_RES }}
       run: |
         cd /tmp
         ls -l
