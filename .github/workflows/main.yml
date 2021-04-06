@@ -33,7 +33,7 @@ jobs:
     - name: Sync Docs of Gerapy
       run: |
         cd /tmp
-        git clone "$IBM_GIT_RES"
+        git clone $IBM_GIT_RES
         cd ./tz/test
         date > git-auto.txt
         git add .
