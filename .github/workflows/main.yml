@@ -24,23 +24,16 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id  # 自己点的 start
     steps:
     - name: Set SSH Environment
-      env:
-        IBM_DEPLOY_KEY: ${{ secrets.IBM_DEPLOY_KEY }}
       run: |
-        mkdir -p ~/.ssh/
-        echo "$IBM_DEPLOY_KEY" > ~/.ssh/id_rsa
-        chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan us-south.git.cloud.ibm.com > ~/.ssh/known_hosts
-        chmod 700 ~/.ssh && chmod 600 ~/.ssh/*
         git config --global user.email "cqc@cuiqingcai.com"
         git config --global user.name "Germey"
     - name: Sync Docs of Gerapy
+      env:
+        IBM_GIT_RES: ${{ secrets.IBM_GIT_RES }}
       run: |
         cd /tmp
-        git clone git@us-south.git.cloud.ibm.com:cuiyy/tz.git
-        ls -l
+        git clone $IBM_GIT_RES
         cd ./tz/test
         date > git-auto.txt
-        git add .
         git commit -a -m "git auto commit"
-        git push origin master --force
+        git push origin --force
